@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Ma première page HTML</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+        function VerifierFormulaire() {
+            if (document.getElementById("prenom").value == "") {
+                alert("Veuillez saisir un prénom !");
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    
+</head>
+<body>
+
+    <h1>Voici quelques fonctinnalités</h1>
+    <p>
+        Le HTML c'est quand même vachement bien. <br /> Nous allons découvrir des nouveautés :
+    </p>
+    <ul>
+        <li>faire une liste</li>
+        <li>créer du style</li>
+        <li>et plus encore</li>
+    </ul>
+    <a href="page2.html">Aller voir la page 2</a>
+    <form action="Page2.html" method="get">
+        <fieldset>
+            <legend>Informations</legend>
+            <label>Prénom :</label>
+            <input id="prenom" type="text" />
+
+            <br />
+            <label class="styleformulaire">Sexe :</label>
+            <select id="sexe">
+                <option value="H">Homme</option>
+                <option value="F">Femme</option>
+            </select>
+
+            <br />
+            <label>Mot de passe :</label>
+            <input id="mdp" type="password" />
+
+            <br />
+            <label>Avez-vous des enfants :</label>
+            <input id="enfants" type="checkbox" />
+
+            <br />
+            <label>Dites quelque chose sur vous</label>
+            <textarea id="apropos"></textarea>
+        </fieldset>
+        <input type="submit" value="Envoyer le formulaire" onclick="return VerifierFormulaire()"/>
+    </form>
+
+
+</body>
+</html>
